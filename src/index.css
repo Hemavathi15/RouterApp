@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:'poppins', sans-serif;
+}
+
+a{
+  text-decoration: none;
+  color: inherit; 
+  @apply cursor-pointer
+
+  
+}
+button{
+  @apply cursor-pointer
+}
+
+.navbar{
+  @apply  py-2 items-center 
+}
+
+.nav-link-container{
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+ @apply px-3 py-1.5 text-[#000] text-sm 
+}
+.nav-links{
+@apply px-2 py-0.5 items-center
+}
+.nav-links a{
+   @apply  px-3 py-0.5  rounded-full
+}
+
+.nav-btn{
+  @apply px-3 h-8 border-0 outline-0  bg-black text-white rounded-full
+}
+
+a.active{
+ @apply bg-gray-200 
+}
