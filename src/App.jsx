@@ -3,6 +3,7 @@ import {
   createRoutesFromElements,
   Route,
   RouterProvider,
+  Routes,
 } from "react-router-dom";
 import Home from "./pages/Home";
 import Products from "./pages/Products";
@@ -14,25 +15,15 @@ import ContactForm from "./components/ContactForm";
 import Contact from "./pages/Contact";
 
 function App() {
-  const router = createBrowserRouter(
-    createRoutesFromElements(
-      <Route path="/" element={<RootLayout />}>
-        <Route index element={<Home />} />
-        <Route path="products" element={<Products />} />
-        <Route path="about" element={<About />} />
-        <Route path="contact" element={<ContactLayout />}>
-          <Route index element={<Contact />} />
-          <Route path="info" element={<ContactInfo />} />
-          <Route path="form" element={<ContactForm />} />
-        </Route>
-      </Route>
-    )
-  );
-
   return (
-    <>
-      <RouterProvider router={router} />
-    </>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/products" element={<Products />} />
+      <Route path="/about" element={<About />} />
+      <Route path="/contact" element={<Contact />} />
+      <Route path="/info" element={<ContactInfo />} />
+      <Route path="/form" element={<ContactForm />} />
+    </Routes>
   );
 }
 
