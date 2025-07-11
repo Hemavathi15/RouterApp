@@ -3,7 +3,7 @@ import React from 'react'
 const ContactInfo = () => {
   return (
     <>
-     <h1>Contact Informatio</h1>
+     <h1>Contact Information</h1>
      <div className="mailid">
         Email id : herojobs@gmail.com
      </div>

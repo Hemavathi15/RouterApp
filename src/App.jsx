@@ -12,6 +12,7 @@ import RootLayout from "./Layout/RootLayout";
 import ContactInfo from "./components/ContactInfo";
 import ContactForm from "./components/ContactForm";
 import Contact from "./pages/Contact";
+
 function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
@@ -20,7 +21,7 @@ function App() {
         <Route path="products" element={<Products />} />
         <Route path="about" element={<About />} />
         <Route path="contact" element={<ContactLayout />}>
-          {/* <Route index element={<Contact />} /> */}
+          <Route index element={<Contact />} />
           <Route path="info" element={<ContactInfo />} />
           <Route path="form" element={<ContactForm />} />
         </Route>

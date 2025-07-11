@@ -6,7 +6,7 @@ const ContactLayout = () => {
   console.log("Contactlayout")
   return (
     <div>
-      <Contact/>
+      {/* <Contact/> */}
         <Outlet/>
     </div>
   )
