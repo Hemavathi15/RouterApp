@@ -1,5 +1,8 @@
 import {
+  createBrowserRouter,
+  createRoutesFromElements,
   Route,
+  RouterProvider,
   Routes,
 } from "react-router-dom";
 import Home from "./pages/Home";
@@ -10,23 +13,30 @@ import ContactForm from "./components/ContactForm";
 import Contact from "./pages/Contact";
 import Navbar from "./components/Navbar";
 import Notfound from "./components/Notfound";
+import RootLayout from "./layouts/RootLayout";
+import ContactLayout from "./layouts/ContactLayout";
 
 function App() {
-  return (
-    <>
-      <Navbar/>
-    <div className="main flex justify-center items-center align-middle">
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/products" element={<Products />} />
-      <Route path="/about" element={<About />} />
-      <Route path="/contact" element={<Contact />} />
-      <Route path="/info" element={<ContactInfo />} />
-      <Route path="/form" element={<ContactForm />} />
+
+  const router = createBrowserRouter(
+    createRoutesFromElements(
+
+<Route path="/"  element={<RootLayout/>}>
+      <Route index element={<Home />} />
+      <Route path="products" element={<Products />} />
+      <Route path="about" element={<About />} />
+      <Route path="contact" element={<ContactLayout/>} >
+      <Route path="info" element={<ContactInfo />} />
+      <Route path="form" element={<ContactForm />} />
+      </Route>
       <Route path="*" element={<Notfound/>}/>
-    </Routes>
-    </div>
-    </>
+    </Route>
+
+
+    )
+  )
+  return (
+    <RouterProvider router={router}></RouterProvider>
   );
 }
 

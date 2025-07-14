@@ -13,16 +13,16 @@ const Navbar = () => {
         <div className="nav-link-container flex items-center  rounded-full">
           <ul className="nav-links flex justify-between align-center gap-4">
             <NavLink to={"/"}>
-              <li>Home</li>
+              <li id='1'>Home</li>
             </NavLink>
             <NavLink to={"/products"}>
-              <li>Products</li>
+              <li id='2'>Products</li>
             </NavLink>
             <NavLink to={"/about"}>
-              <li>About</li>
+              <li id='3'>About</li>
             </NavLink>
             <NavLink to={"/contact"}>
-              <li>Contact</li>
+              <li id='4'>Contact</li>
             </NavLink>
           </ul>
         </div>
