@@ -1,0 +1,64 @@
+{
+  "jobs": [
+    {
+      "id": 1,
+      "jobTitle": "Frontend Developer",
+      "salary": "₹8,00,000",
+      "location": "Bangalore"
+    },
+    {
+      "id": 2,
+      "jobTitle": "Backend Developer",
+      "salary": "₹9,50,000",
+      "location": "Hyderabad"
+    },
+    {
+      "id": 3,
+      "jobTitle": "Full Stack Engineer",
+      "salary": "₹10,00,000",
+      "location": "Pune"
+    },
+    {
+      "id": 4,
+      "jobTitle": "DevOps Engineer",
+      "salary": "₹11,00,000",
+      "location": "Chennai"
+    },
+    {
+      "id": 5,
+      "jobTitle": "React Developer",
+      "salary": "₹8,50,000",
+      "location": "Remote"
+    },
+    {
+      "id": 6,
+      "jobTitle": "QA Automation Engineer",
+      "salary": "₹7,80,000",
+      "location": "Mumbai"
+    },
+    {
+      "id": 7,
+      "jobTitle": "UI/UX Designer",
+      "salary": "₹7,50,000",
+      "location": "Delhi"
+    },
+    {
+      "id": 8,
+      "jobTitle": "Data Scientist",
+      "salary": "₹12,00,000",
+      "location": "Noida"
+    },
+    {
+      "id": 9,
+      "jobTitle": "Mobile App Developer",
+      "salary": "₹9,20,000",
+      "location": "Kochi"
+    },
+    {
+      "id": 10,
+      "jobTitle": "Cloud Solutions Architect",
+      "salary": "₹13,50,000",
+      "location": "Remote"
+    }
+  ]
+}

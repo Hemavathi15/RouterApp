@@ -6,13 +6,13 @@ const Contact = () => {
   
 
   return (
-    <>
-      <div className="text-2xl">Contact Page</div>
-      <div className="contact-details flex gap-4 flex-col">
-        <button className="contact-info" onClick={() => navigate('info')}>Contact Info</button>
-        <button className="Contact-form" onClick={() => navigate('form')}>Contact form</button>
+    <div className='Contact-main' >
+      <h2 className="page-text ">Contact Page</h2>
+      <div className="contact-details flex gap-4 mt-5 justify-center">
+        <button className="contact-btn btn" onClick={() => navigate('info')}>Contact Info</button>
+        <button className="contact-btn btn" onClick={() => navigate('form')}>Contact form</button>
       </div>
-    </>
+    </div>
   );
 };
 

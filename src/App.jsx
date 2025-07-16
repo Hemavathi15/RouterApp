@@ -15,6 +15,10 @@ import Navbar from "./components/Navbar";
 import Notfound from "./components/Notfound";
 import RootLayout from "./layouts/RootLayout";
 import ContactLayout from "./layouts/ContactLayout";
+import JobLayout from "./layouts/JobLayout";
+import Jobs, { jobsLoader } from "./pages/Jobs";
+import JobDetails, { jobDetailLoader } from "./components/JobDetails";
+import ErrorPage from "./pages/ErrorPage";
 
 function App() {
 
@@ -23,8 +27,11 @@ function App() {
 
 <Route path="/"  element={<RootLayout/>}>
       <Route index element={<Home />} />
-      <Route path="products" element={<Products />} />
       <Route path="about" element={<About />} />
+      <Route path="jobs" element={<JobLayout />} >
+      <Route index element={<Jobs/>} loader={jobsLoader}/>
+      <Route path=":id" element={<JobDetails/>} loader={jobDetailLoader} errorElement={<ErrorPage/>}/>
+      </Route>
       <Route path="contact" element={<ContactLayout/>} >
       <Route path="info" element={<ContactInfo />} />
       <Route path="form" element={<ContactForm />} />
@@ -36,6 +43,7 @@ function App() {
     )
   )
   return (
+
     <RouterProvider router={router}></RouterProvider>
   );
 }
